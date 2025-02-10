@@ -9,3 +9,76 @@
 a {
     text-decoration: none;
 }
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/art-bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    display: table;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 70px;
+    display: block;
+    margin: 100px auto;
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-weight: 300;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 23px;
+}
+
+#message {
+    min-width: 300px;
+    margin-left: -150px;
+    visibility: hidden;
+    bottom: 60px;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+    font-size: 25px;
+    position: absolute;
+    padding: 16px;
+    color: #000;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+    transition: all .4s ease-in-out;
+}
+
+#message.show {
+    visibility: visible;
+    display: block;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        bottom: 0;
+        opacity: 0;
+    } 
+    to {
+        bottom: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        bottom: 60px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    } 
+}
